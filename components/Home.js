@@ -32,7 +32,7 @@ export default function Home({ navigation }) {
             <View style={styles.card} onPress={() => navigation.navigate('Home')}>
                 <Image
                     style={styles.image}
-                    source={require('./assets/characterize.png')}
+                    source={require('../assets/characterize.png')}
                     resizeMethod='auto'
                     resizeMode='contain'
                     />
@@ -46,7 +46,7 @@ export default function Home({ navigation }) {
             <View style={styles.card}>
                 <Image
                     style={styles.image}
-                    source={require('./assets/dna.png')}
+                    source={require('../assets/dna.png')}
                     resizeMethod='auto'
                     resizeMode='contain'
                     />
@@ -60,7 +60,7 @@ export default function Home({ navigation }) {
             <View style={styles.card}>
                 <Image
                     style={styles.image}
-                    source={require('./assets/protein.png')}
+                    source={require('../assets/protein.png')}
                     resizeMethod='auto'
                     resizeMode='contain'
                     />

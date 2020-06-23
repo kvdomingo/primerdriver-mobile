@@ -2,10 +2,10 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './Home';
-import Characterize from './Characterize';
-import Dna from './Dna';
-import Protein from './Protein';
+import Home from './components/Home';
+import Characterize from './components/Characterize';
+import Dna from './components/Dna';
+import Protein from './components/Protein';
 
 
 const Stack = createStackNavigator();
