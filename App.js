@@ -1,19 +1,24 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './Home';
+import Characterize from './Characterize';
+import Dna from './Dna';
+import Protein from './Protein';
+
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='PrimerDriver'>
+                <Stack.Screen name='Home' component={Home} options={{ title: 'PrimerDriver' }} />
+                <Stack.Screen name='Characterize' component={Characterize} options={{ title: 'Primer Characterization' }} />
+                <Stack.Screen name='DNA' component={Dna} options={{ title: 'DNA-based Primer Design' }} />
+                <Stack.Screen name='Protein' component={Protein} options={{ title: 'Protein-based Primer Design' }} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
